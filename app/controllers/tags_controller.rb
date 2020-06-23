@@ -27,6 +27,6 @@ class TagsController < ApplicationController
   private
 
   def strong_params
-    params.require(:tag).permit(:names)
+    params.require(:tag).permit(:name)
   end
 end
