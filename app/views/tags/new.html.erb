@@ -1,2 +1,10 @@
-<h1>Tags#new</h1>
-<p>Find me in app/views/tags/new.html.erb</p>
+<div class="container">
+
+  <h2>Create a new Tag</h2>
+
+  <%= simple_form_for @tag do |f| %>
+    <%= f.input :name, input_html: { maxlength: 20 }, label: 'Tag Name' %>
+    <%= f.submit %>
+  <% end %>
+
+</div>
