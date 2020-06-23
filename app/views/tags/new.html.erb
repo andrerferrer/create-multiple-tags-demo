@@ -1,5 +1,15 @@
 <div class="container">
 
+  <h2>These Tags were already created</h2>
+  <p>
+    <% @tags.each do |tag| %>
+      <div class="badge badge-dark">
+        <%= tag.name %>
+        <%= link_to '❌', tag_path(tag), method: :delete, data: { confirm: "Are you sure?" }, remote: true %>
+      </div>
+    <% end %>
+  </p>
+
   <h2>Create a new Tag</h2>
 
   <%= simple_form_for @tag do |f| %>
