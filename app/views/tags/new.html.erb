@@ -10,11 +10,11 @@
     <% end %>
   </p>
 
-  <h2>Create a new Tag</h2>
+  <h2>Create new Tags</h2>
 
   <%= simple_form_for @tag do |f| %>
-    <%= f.input :name, input_html: { maxlength: 20 }, label: 'Tag Name' %>
-    <%= f.submit %>
+    <%= f.input :names, label: false, placeholder: "Tag number one, Tag2, Tag3 etc" %>
+    <%= f.submit 'Create Tags' %>
   <% end %>
 
 </div>
