@@ -5,9 +5,15 @@ class TagsController < ApplicationController
   end
 
   def create
-    @tag = Tag.new strong_params
     @tags = Tag.all
-    @tag.save ? redirect_to(root_path, notice: "Tag #{@tag.name} was succesfully created") : render(:new)
+    names = strong_params[:name].split(/, /)
+    
+    names.each do |name|
+      @tag = Tag.new name: name
+      @tag.save
+    end
+
+    redirect_to(root_path, notice: "Tags '#{names.join(" ")}' were succesfully created")
   end
 
   def destroy
@@ -21,6 +27,6 @@ class TagsController < ApplicationController
   private
 
   def strong_params
-    params.require(:tag).permit(Tag::STRONG_PARAMS)
+    params.require(:tag).permit(:names)
   end
 end
