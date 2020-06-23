@@ -1,0 +1,2 @@
+  - Filter by tags (sem a gem)
+  - https://stackoverflow.com/questions/21340358/create-multiple-records-from-a-comma-separated-entry-in-rails-form

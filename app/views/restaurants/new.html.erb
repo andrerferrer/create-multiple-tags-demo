@@ -1,0 +1,13 @@
+<div class="container">
+
+  <%= simple_form_for @restaurant do |f| %>
+    <%= f.input :name %>
+    <%= f.input :address %>
+    <%= f.association :tags, multiple: true, include_hidden: false %>
+    <%# f.input :tags, collection: Tag.all, input_html: { multiple: true }, include_hidden: false %>
+    <%# f.association :tags, multiple: true, as: :check_boxes %>
+    <%# f.association :tags, as: :radio_buttons %>
+    <%= f.submit %>
+  <% end %>
+
+</div>
