@@ -8,7 +8,7 @@ It was created from [this repo](https://github.com/andrerferrer/model-with-tags-
 
 ## What needs to be done?
 
-### 1. In the [view]()
+### 1. In the [view](https://github.com/andrerferrer/create-multiple-tags-demo/blob/master/app/views/tags/new.html.erb)
 ```erb
   <h2>Create new Tags</h2>
 
@@ -18,7 +18,7 @@ It was created from [this repo](https://github.com/andrerferrer/model-with-tags-
   <% end %>
 ```
 
-### 2. In the [controller]()
+### 2. In the [controller](https://github.com/andrerferrer/create-multiple-tags-demo/blob/master/app/controllers/tags_controller.rb)
 ```ruby
   def new
     @tag = Tag.new
