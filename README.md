@@ -8,6 +8,37 @@ It was created from [this repo](https://github.com/andrerferrer/model-with-tags-
 
 ## What needs to be done?
 
+### 1. In the [view]()
+```erb
+  <h2>Create new Tags</h2>
+
+  <%= simple_form_for @tag do |f| %>
+    <%= f.input :name, label: false, placeholder: "Tag number one, Tag2, Tag3 etc" %>
+    <%= f.submit 'Create Tags' %>
+  <% end %>
+```
+
+### 2. In the [controller]()
+```ruby
+  def new
+    @tag = Tag.new
+    @tags = Tag.all
+  end
+
+  def create
+    @tags = Tag.all
+    names = strong_params[:name].split(/, /)
+    
+    names.each do |name|
+      @tag = Tag.new name: name
+      @tag.save
+    end
+
+    redirect_to(root_path, notice: "Tags '#{names.join(" ")}' were succesfully created")
+  end
+```
+
+
 TBD
 
 And we're good to go 🤓
