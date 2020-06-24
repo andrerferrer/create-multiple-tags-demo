@@ -39,8 +39,6 @@ It was created from [this repo](https://github.com/andrerferrer/model-with-tags-
 ```
 
 
-TBD
-
 And we're good to go 🤓
 
 Good Luck and Have Fun
